@@ -1,0 +1,19 @@
+#ifndef ArduinoMonitor_h
+#define ArduinoMonitor_h
+
+// Usage:
+//   MONITOR(x);
+//   MONITOR2("lvn", really_long_cosine_variable_name);
+//   MONITOR_ENDL()
+// produces a line of output like this, suitable for viewing with Tools/Serial Plotter:
+//   x:652 lvn:54.27
+//
+// To disable output, #define NO_MONITOR_OUTPUT
+
+#ifndef NO_MONITOR_OUTPUT
+#define MONITOR(v) Serial.print(" " #v ":"); Serial.print(v)
+#define MONITOR2(name, v) Serial.print(" " name ":"); Serial.print(v)
+#define MONITOR_ENDL() Serial.println()
+#endif // NO_MONITOR_OUTPUT
+
+#endif // ArduMonitor_h
