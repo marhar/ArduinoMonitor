@@ -11,8 +11,10 @@
 // To disable output, #define NO_MONITOR_OUTPUT
 
 #ifndef NO_MONITOR_OUTPUT
-#define MONITOR(v) Serial.print(" " #v ":"); Serial.print(v)
-#define MONITOR2(name, v) Serial.print(" " name ":"); Serial.print(v)
+#define DISPLAY(v) Serial.print(F(" " #v "=")); Serial.print(v)
+#define DISPLAY2(name, v) Serial.print(F(" " name "=")); Serial.print(v)
+#define MONITOR(v) Serial.print(F(" " #v ":")); Serial.print(v)
+#define MONITOR2(name, v) Serial.print(F(" " name ":")); Serial.print(v)
 #define MONITOR_ENDL() Serial.println()
 #endif // NO_MONITOR_OUTPUT
 

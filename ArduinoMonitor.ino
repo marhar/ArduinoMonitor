@@ -8,14 +8,15 @@ void setup() {
 // Uncomment the following line to disable monitor output
 // #define NO_MONITOR_OUTPUT
 
+float scale = 10.0;
+float x = 0.0;
 void loop() {
-  for (float v = 0.0; v <= 360.0; v += 0.01) {
-    float s = sin(v) * 100;
-    float really_long_cosine_variable_name = cos(v) * 100;
+  x += .01;
+  float s = sin(x) * scale;
+  float really_long_name = cos(x) * scale;
 
-    // Print these two variables in a plotter compatible format: s:2.56 c:7.28
-    MONITOR(s);
-    MONITOR2("c", really_long_cosine_variable_name);
-    MONITOR_ENDL();    
-  }
+  DISPLAY(scale);
+  MONITOR(s);
+  MONITOR2("cos", really_long_name);
+  MONITOR_ENDL();
 }
