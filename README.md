@@ -48,5 +48,5 @@ Example:
       MONITOR_ENDL();
     }
 
-![monitor screenshot](monitor-screenshot.png)
 ![plotter screenshot](plotter-screenshot.png)
+![monitor screenshot](monitor-screenshot.png)
